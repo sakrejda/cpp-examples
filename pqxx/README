@@ -1,0 +1,6 @@
+
+g++ -L /usr/local/lib -l pqxx -o basic-test basic-test.cpp 
+PGDATABASE="pqxx_test" ./basic-test
+g++ -L /usr/local/lib -l pqxx -o transactor-test transactor-test.cpp 
+PGDATABASE="pqxx_test" ./transactor-test
+psql -d pqxx_test
